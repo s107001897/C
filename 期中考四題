@@ -1,0 +1,148 @@
+A
+for迴圈
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+   int i,sum=4;
+   for(i=1;i<=401;i++)			
+      sum+=i;
+   printf("1+5+9+...+401=%d\n",sum);	
+   
+   system("pause");
+   return 0;
+}
+
+1+5+9+...+401=80605
+
+while迴圈
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+   int i=1,sum=4;
+   while(i<=401)
+   {		   			
+     sum+=i;
+     printf("1+5+9+...+401=%d\n",sum);
+     i++;
+    }
+   system("pause");
+   return 0;
+}
+
+1+5+9+...+401=5
+1+5+9+...+401=7
+1+5+9+...+401=10
+.
+.
+.
+1+5+9+...+401=80605
+
+dowhile迴圈
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+   int i=1,sum=4;
+   do
+   sum+=i++;
+   while(i<=401);
+   			
+     printf("1+5+9+...+401=%d\n",sum);
+          
+   system("pause");
+   return 0;
+}
+
+1+5+9+...+401=80605
+
+B
+for迴圈
+
+#include <stdio.h>
+#include <stdlib.h>
+double power(double, int);	
+int main(void)
+{
+   double x;		
+   int n;		
+
+   printf("請輸入底數與次方:");	
+   scanf("%lf,%d",&x,&n); 
+   printf("這是使用for loop完成的結果");		
+   printf("%lf的%dΩ次方=%lf\n",x,n,power(x,n)); 
+
+   system("pause");
+   return 0;
+}
+
+double power(double base, int n)   
+{
+   int i;
+   double pow=1.0;
+   for(i=1;i<=n;i++)		
+      pow=pow*base;
+   return pow;
+}
+
+請輸入底數與次方:2,5
+這是使用for loop完成的結果2.000000的5Ω次方=32.000000
+
+while迴圈
+dowhile迴圈
+recursion
+
+C
+for迴圈
+#include <stdio.h>
+#include <stdlib.h>
+int fac(int);     
+int main(void)
+{
+   printf("fac(4)=%d\n", fac(4));   
+
+   system("pause");
+   return 0;
+}
+
+int fac(int n)	
+{
+   if(n>0)
+      return (n*fac(n-1));
+   else
+      return 1;
+}
+
+while迴圈
+dowhile迴圈
+recursion
+
+D
+for迴圈
+#include <stdio.h>
+#include <stdlib.h>
+int fib(int);		
+int main(void)
+{
+   int n;
+   for(n=1;n<=10;n++)			
+      printf("fib(%d)=%d\n",n,fib(n));		
+
+   system("pause");
+   return 0;
+}
+
+int fib(int n) 		
+{	
+   if(n==1 || n==2)	
+      return 1;
+   else			
+      return (fib(n-1)+fib(n-2));
+}
+
+while迴圈
+dowhile迴圈
+recursion
