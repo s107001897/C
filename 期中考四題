@@ -1,7 +1,6 @@
-A
+A.
 for迴圈
-#include <stdio.h>
-#include <stdlib.h>
+
 int main(void)
 {
    int i,sum=4;
@@ -17,8 +16,6 @@ int main(void)
 
 while迴圈
 
-#include <stdio.h>
-#include <stdlib.h>
 int main(void)
 {
    int i=1,sum=4;
@@ -42,8 +39,6 @@ int main(void)
 
 dowhile迴圈
 
-#include <stdio.h>
-#include <stdlib.h>
 int main(void)
 {
    int i=1,sum=4;
@@ -59,27 +54,23 @@ int main(void)
 
 1+5+9+...+401=80605
 
-B
+B.
 for迴圈
 
-#include <stdio.h>
-#include <stdlib.h>
-double power(double, int);	
+double power_for(double, int);	
 int main(void)
 {
    double x;		
    int n;		
 
    printf("請輸入底數與次方:");	
-   scanf("%lf,%d",&x,&n); 
-   printf("這是使用for loop完成的結果");		
-   printf("%lf的%dΩ次方=%lf\n",x,n,power(x,n)); 
+   scanf("%lf,%d",&x,&n); 		
+   printf("%lf的%d次方=%lf\n",x,n,power_for(x,n)); 
 
    system("pause");
    return 0;
 }
-
-double power(double base, int n)   
+double power_for(double base, int n)   
 {
    int i;
    double pow=1.0;
@@ -89,20 +80,81 @@ double power(double base, int n)
 }
 
 請輸入底數與次方:2,5
-這是使用for loop完成的結果2.000000的5Ω次方=32.000000
+2.000000的5次方=32.000000
 
 while迴圈
-dowhile迴圈
-recursion
 
-C
+double power_while(double, int);	
+int main(void)
+{
+   double x;		
+   int n;		
+
+   printf("請輸入底數與次方:");	
+   scanf("%lf,%d",&x,&n); 		
+   printf("%lf的%d次方=%lf\n",x,n,power_while(x,n)); 
+
+   system("pause");
+   return 0;
+}
+double power_while(double base, int n)   
+{
+   int i=1;
+   double pow=1.0;
+   while(i<=n)	
+{
+    pow=pow*base;
+    i++;
+}
+   return pow;
+}
+
+請輸入底數與次方:2,5
+2.000000的5次方=32.000000
+
+dowhile迴圈
+
+double power_dowhile(double, int);	
+int main(void)
+{
+   double x;		
+   int n;		
+
+   printf("請輸入底數與次方:");	
+   scanf("%lf,%d",&x,&n); 		
+   printf("%lf的%d次方=%lf\n",x,n,power_dowhile(x,n)); 
+
+   system("pause");
+   return 0;
+}
+double power_dowhile(double base, int n)   
+{
+   int i=1;
+   double pow=1.0;
+   do
+{  
+   i++;  
+   pow=pow*base;
+} 
+   while(i<=n); 
+   return pow;
+}
+
+請輸入底數與次方:2,5
+2.000000的5次方=32.000000
+
+遞迴(recursion)
+
+C.
 for迴圈
-#include <stdio.h>
-#include <stdlib.h>
+while迴圈
+dowhile迴圈
+
+遞迴(recursion)
 int fac(int);     
 int main(void)
 {
-   printf("fac(4)=%d\n", fac(4));   
+   printf("fac(5)=%d\n", fac(5));   
 
    system("pause");
    return 0;
@@ -116,14 +168,11 @@ int fac(int n)
       return 1;
 }
 
-while迴圈
-dowhile迴圈
-recursion
+fac(5)=120
 
-D
+D.
 for迴圈
-#include <stdio.h>
-#include <stdlib.h>
+
 int fib(int);		
 int main(void)
 {
@@ -145,4 +194,4 @@ int fib(int n)
 
 while迴圈
 dowhile迴圈
-recursion
+遞迴(recursion)
